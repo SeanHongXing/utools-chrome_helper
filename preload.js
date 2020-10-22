@@ -29,6 +29,7 @@ function getChromeBookmarks () {
             lowTitle: c.name.toLowerCase(),
             title: c.name,
             description: c.url,
+            lowUrl: c.url.toLowerCase(),
             icon: 'web.png'
           })
         } else if (c.type === 'folder') {
@@ -71,7 +72,7 @@ window.exports = {
       search: (action, searchWord, callbackSetList) => {
         if (!searchWord) return callbackSetList()
         searchWord = searchWord.toLowerCase()
-        return callbackSetList(bookmarksDataCache.filter(x => x.lowTitle.includes(searchWord)))
+        return callbackSetList(bookmarksDataCache.filter(x => x.lowTitle.includes(searchWord) || x.lowUrl.includes(searchWord)))
       },
       select: (action, itemData) => {
         window.utools.hideMainWindow()
