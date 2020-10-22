@@ -18,7 +18,10 @@
         {
           "type": "window",
           "match": {
-            "app": ["Google Chrome.app", "chrome.exe"]
+            "app": [
+              "Google Chrome.app",
+              "chrome.exe"
+            ]
           },
           "label": "隐身模式打开"
         }
@@ -29,7 +32,8 @@
       "explain": "Chrome 书签搜索",
       "cmds": [
         "Chrome BookMarks",
-        "Chrome 书签"
+        "Chrome 书签",
+        "sq"
       ]
     },
     {
